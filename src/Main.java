@@ -19,8 +19,8 @@ public class Main {
         }
         System.out.println("Сумма трат за месяц составила " + expensesSum +" рублей");
         //Задание 2
-        int maxExpenses = -1;
-        int minExpenses = 2_000_000_000;
+        int maxExpenses = expensesMonth[0];
+        int minExpenses = expensesMonth[0];
         for (int a = 0; a < expensesMonth.length-1; a++) {
             final int currentMaximum = expensesMonth[a];
             if (currentMaximum > maxExpenses) {
