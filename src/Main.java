@@ -50,5 +50,63 @@ public class Main {
         for (char d : reverseFullName) {
             System.out.print(d);
         }
+        System.out.println();
+//        Задание 5
+        int [][] matrix = new int[3][3];
+        for (int i = 0; i < matrix.length; i++) {
+            matrix[i][i] = 1;
+        }
+        for (int i = 0; i < matrix.length; i++) {
+            matrix[i][matrix.length-1-i] = 1;
+        }
+        for (int[] row : matrix) {
+            for (int column : row) {
+                System.out.print(column + " ");
+            }
+            System.out.println();
+        }
+//        Задание 6
+        int[] arr = {5, 4, 3, 2, 1};
+        int[] newArr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            newArr[i] = arr[arr.length - i - 1];
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(newArr));
+//        Задание 7
+        int fromArray;
+        for (int i = 0; i < arr.length/2; i++) {
+            fromArray = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = arr[i];
+            arr[i] = fromArray;
+        }
+        System.out.println(Arrays.toString(arr));
+//        Задание 8
+        int[] firArr = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+        int C;
+        int D;
+        int summ;
+            for (int k = 0; k < firArr.length - 1; k++) {
+                D = firArr[k];
+                summ = firArr[0] + D;
+                if (summ == -2) {
+                    System.out.println("Искомая пара чисел -- " + firArr[0] + " и " + D);
+                }
+            }
+//        Задание 9
+        int[] secArr = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+        int sum;
+        int A;
+        int B;
+        for (int i = 0; i < secArr.length-1; i++) {
+            A = secArr[i];
+            for (int k = 0; k < secArr.length-1; k++) {
+                B = secArr[k];
+                sum = A + B;
+                if (sum == -2) {
+                    System.out.println("Пара чисел -- " + A + " и " + B);
+                }
+            }
+        }
     }
 }
